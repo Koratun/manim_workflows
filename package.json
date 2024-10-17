@@ -15,18 +15,50 @@
   "contributes": {
     "commands": [
       {
-        "command": "manim-workflows.helloWorld",
-        "title": "Hello World"
+        "command": "manim-workflows.runManimScene",
+        "title": "Runs the currently selected Manim Scene"
       },
       {
-        "command": "manim-workflows.copyToTerminal",
-        "title": "Copy Selection to Terminal"
+        "command": "manim-workflows.exitManim",
+        "title": "Exit Manim/IPython"
+      },
+      {
+        "command": "manim-workflows.checkpointPaste",
+        "title": "Run all animations up to and including the copied code"
+      },
+      {
+        "command": "manim-workflows.recordedCheckpointPaste",
+        "title": "Runs and renders the copied code to an output file"
+      },
+      {
+        "command": "manim-workflows.skippedCheckpointPaste",
+        "title": "Skip to the copied code and run it"
       }
     ],
     "keybindings": [
       {
-        "key": "ctrl+shift+t",
-        "command": "manim-workflows.copyToTerminal",
+        "key": "ctrl+alt+r",
+        "command": "manim-workflows.runManimScene",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "ctrl+shift+q",
+        "command": "manim-workflows.exitManim",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "ctrl+alt+v",
+        "command": "manim-workflows.checkpointPaste",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "ctrl+shift+v+r",
+        "command": "manim-workflows.recordedCheckpointPaste",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "ctrl+shift+v+s",
+        "command": "manim-workflows.skippedCheckpointPaste",
         "when": "editorTextFocus"
       }
     ]
