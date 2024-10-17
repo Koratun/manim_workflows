@@ -37,7 +37,7 @@
     ],
     "keybindings": [
       {
-        "key": "ctrl+alt+r",
+        "key": "ctrl+alt+m",
         "command": "manim-workflows.runManimScene",
         "when": "editorTextFocus"
       },
